@@ -1,3 +1,5 @@
+
+{{-- THIS IS UNUSED, DONT EDIT THIS --}}
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>

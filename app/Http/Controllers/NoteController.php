@@ -12,7 +12,9 @@ class NoteController extends Controller
      */
     public function index()
     {
-        $note = Note::query()->orderBy('created_at','desc')->paginate();
+        $note = Note::query()->where('user_id',request()->user()->id)
+        ->orderBy('created_at','desc')
+        ->paginate();
         return view("note.index", ['note' => $note]);
     }
 
@@ -35,7 +37,7 @@ class NoteController extends Controller
             'Due' => ['required', 'string']
         ]);
 
-        $data['user_id'] = 1;
+        $data['user_id'] = $request->user()->id;
         $note = Note::create($data);
         return to_route('note.show', $note)->with('message', 'Task posted.');
     }
@@ -45,6 +47,9 @@ class NoteController extends Controller
      */
     public function show(Note $note)
     {
+        if ($note->user_id !== request()->user()->id){
+            abort(403);
+        }
         return view('note.show', ['note' => $note]);
     }
 
@@ -79,4 +84,6 @@ class NoteController extends Controller
         $note->delete();
         return to_route('note.index', $note)->with('message', 'Task removed.');
     }
+
+
 }

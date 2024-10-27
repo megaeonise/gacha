@@ -1,6 +1,6 @@
 <x-app-layout>
-    <div class="task-container single-task">
-        <h1 class="text-3xl py-4">Edit your task</h1>
+    <div class="task-container single-task py-10">
+        <h1 class="text-3xl py-4" style='color:rgb(128, 128, 128)'>Edit your task:</h1>
         <form action="{{ route('note.update', $note) }}" method="POST" class="task">
             @csrf
             @method('PUT')

@@ -1,6 +1,6 @@
 <x-app-layout>
-   this is index
-   <div class="task-container">
+   <div class="task-container py-10">
+    <p style='color:grey'>this is index</p>
     <a href="{{route('note.create')}}" class = "new-task-btn">
         Click to add tasks
     </a>
@@ -30,7 +30,7 @@
             </div>
         </div>
     @endforeach
-    </div>
+    </div class="py-5">
     {{ $note->links() }}
    </div>
 </x-app-layout>
