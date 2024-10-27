@@ -122,6 +122,22 @@
   background-color: #704300;
 }
 
+.task-buttons .task-view-button {
+    padding: 6px 10px;
+    border-radius: 4px;
+    color: white;
+    background-color: #00511e;
+    border: 1px solid #00980d;
+    transition: all 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  .task-buttons .task-view-button:hover {
+    background-color: #002d00;
+  }
+
 .task-header {
   display: flex;
   align-items: center;

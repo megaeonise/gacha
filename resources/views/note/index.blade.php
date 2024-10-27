@@ -20,12 +20,17 @@
                 {{ $task->Due}}
             </div>
             <div class="task-buttons">
-                <a href="{{route('note.show', $task)}}" class="task-viewbtn">View</a>
-                <a href="{{route('note.edit', $task)}}" class="task-editbtn">Edit</a>
-                <button class="task-delbtn">Delete</button>
+                <a href="{{route('note.show', $task)}}" class="task-view-button">View</a>
+                <a href="{{route('note.edit', $task)}}" class="task-edit-button">Edit</a>
+                <form action="{{ route('note.destroy', $task) }}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button class="task-delete-button">Delete</button>
+                </form>
             </div>
         </div>
     @endforeach
     </div>
+    {{ $note->links() }}
    </div>
 </x-layout>
