@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
    this is index
    <div class="task-container">
     <a href="{{route('note.create')}}" class = "new-task-btn">
@@ -8,15 +8,15 @@
         @foreach ($note as $task)
         <div class="task">
             <div class="task-body">
-                <h3>Start: </h3>
+                <h3><b>Start: </b></h3>
                 {{ $task->Start}}
             </div>
             <div class="task-body">
-                <h3>Task: </h3>
+                <h3><b>Task:</b> </h3>
                 {{ Str::words($task->Task, 100)}}
             </div>
             <div class="task-body">
-                <h3>Due: </h3>
+                <h3><b>Due: </b></h3>
                 {{ $task->Due}}
             </div>
             <div class="task-buttons">
@@ -33,4 +33,4 @@
     </div>
     {{ $note->links() }}
    </div>
-</x-layout>
+</x-app-layout>

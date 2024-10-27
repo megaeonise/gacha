@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <div class="task-container single-task">
         <div class="task-header">
             <h1 class="text-3xl py-4">Created at: {{ $note->created_at }}</h1>
@@ -20,4 +20,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+</x-app-layout>

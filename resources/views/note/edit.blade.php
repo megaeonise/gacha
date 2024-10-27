@@ -1,4 +1,4 @@
-<x-layout>
+<x-app-layout>
     <div class="task-container single-task">
         <h1 class="text-3xl py-4">Edit your task</h1>
         <form action="{{ route('note.update', $note) }}" method="POST" class="task">
@@ -18,4 +18,4 @@
             </div>
         </form>
     </div>
-</x-layout>
+</x-app-layout>

@@ -1,6 +1,6 @@
-<x-layout>
+<x-app-layout>
     <div class="task-container single-task">
-        <h1>Create new task</h1>
+        <h1><strong>Create new task:</strong></h1>
         <form action="{{ route('note.store') }}" method="POST" class="task">
             @csrf
             <textarea name="Start" rows="10" class="task-body" placeholder="Enter your task here"></textarea>
@@ -14,4 +14,4 @@
             </div>
         </form>
     </div>
-</x-layout>
+</x-app-layout>
