@@ -11,7 +11,8 @@ Route::redirect('/', '/note')->name('dashboard');
 Route::middleware(['auth', 'verified'])->group(function(){
     Route::get('/', [DashboardController::class, 'index']) ;
 
-    Route::get('/roll', [GachaController::class, 'index']) ;
+    Route::get('/roll', [GachaController::class, 'index'])->name('gacha.index');
+    Route::get('/roll/create', [GachaController::class, 'create'])->name('gacha.create');
 
     Route::resource('note', NoteController::class);
 });

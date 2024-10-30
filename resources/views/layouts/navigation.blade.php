@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('note.index')" :active="request()->routeIs('note.index')">
                         {{ __('Tasks') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('gacha.index')" :active="request()->routeIs('gacha.index')">
+                        {{ __('Roll') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -75,6 +78,9 @@
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('note.index')" :active="request()->routeIs('note.index')">
                 {{ __('Tasks') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('gacha.index')" :active="request()->routeIs('gacha.index')">
+                {{ __('Roll') }}
             </x-responsive-nav-link>
         </div>
 
