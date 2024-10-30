@@ -16,4 +16,10 @@ class GachaController extends Controller
         }
         abort(code:403);
     }
+
+    // public function store(){
+    //     $data = $request->validate([
+
+    //     ]);
+    // }
 }
